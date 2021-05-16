@@ -2,6 +2,8 @@ btn:
   home: 主页
   blog: 文章
   wiki: 项目
+  notes: 便签
+  more: 更多
   recent_publish: 近期发布
   all_wiki: 所有项目
   category: 分类

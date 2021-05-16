@@ -1,10 +1,16 @@
 <%
+const since = config.since;
+const year = new Date().getFullYear();
+const user_name = config.author;
 const author = '[@' + config.author + '](' + config.url + config.root + ')';
 const using = '[' + stellar_info('name') + '](' + stellar_info('tree') + ')';
 const source = theme.footer.source;
 function layoutDiv() {
   var wrapper = '';
   wrapper += '<footer class="page-footer fs12"><hr><div>';
+  if (theme.footer.copyright) {
+    wrapper += markdown(__('footer.copyright', since, year, author));
+  }
   if (theme.footer.license) {
     wrapper += markdown(__('footer.license', theme.footer.license));
   }

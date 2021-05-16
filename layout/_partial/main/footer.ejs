@@ -8,9 +8,7 @@ const source = theme.footer.source;
 function layoutDiv() {
   var wrapper = '';
   wrapper += '<footer class="page-footer fs12"><hr><div>';
-  if (theme.footer.copyright) {
-    wrapper += markdown(__('footer.copyright', since, year, author));
-  }
+  wrapper += markdown(__('footer.copyright', since, year, author));
   if (theme.footer.license) {
     wrapper += markdown(__('footer.license', theme.footer.license));
   }

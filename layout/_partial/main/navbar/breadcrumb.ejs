@@ -6,12 +6,12 @@
         }
         %>
         <div id='breadcrumb' <%- category_color(firstCat) %>>
-          <a class='cap breadcrumb' href='/'>
-            <%- __('btn.home') %>
+          <a class='cap breadcrumb' href='/blog/'>
+            <%- __('btn.blog') %>
           </a>
           <span class="sep"></span>
-          <a class='cap breadcrumb' href='/'>
-            <%- __('btn.home') %>
+          <a class='cap breadcrumb' href='/blog/'>
+            <%- __('btn.blog') %>
           </a>
           <% if (page.layout=='post' && page.categories && page.categories.length> 0) { %>
             <span class="sep"></span>

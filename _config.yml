@@ -43,9 +43,9 @@ sidebar:
     # welcome
     welcome:
       layout: markdown
-      title: 欢迎
+      title: 欢迎来到Cubik的小站
       content:
-        - '欢迎光临小站，[Stellar](https://github.com/xaoxuu/hexo-theme-stellar/) 是一个支持 wiki 的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。'
+        - '无限创意 / 无限进步 / 无限可能'
 
 
 

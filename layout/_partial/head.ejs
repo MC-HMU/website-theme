@@ -58,7 +58,7 @@ function og_args() {
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+  <meta name="theme-color" content="#f8f8f8">
   <title><%- generate_title() %></title>
 
   <% if (theme.open_graph && theme.open_graph.enable) { %>
@@ -77,11 +77,13 @@ function og_args() {
     <%- css('/css/main.css') %>
   <% } %>
 
+  <% if (config.favicon) { %>
+    <%- favicon_tag(config.favicon) %>
+  <% } %>
+  
   <% if (config.inject && config.inject.head){ %>
     <% (config.inject.head||[]).forEach(function(item){ %>
       <%- item %>
     <% }) %>
-  <% } else if (config.favicon) { %>
-    <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(config.favicon) %>">
   <% } %>
 </head>

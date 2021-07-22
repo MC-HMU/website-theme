@@ -1,8 +1,7 @@
 .l_left .footer
-  margin-top: 0
-  margin-bottom: 1rem
-  line-height: 0
-
+  margin-top: .5rem
+  @media screen and (max-width: $device-tablet)
+    margin-bottom: 1rem
 
 .social-wrap
   display: grid
@@ -20,10 +19,29 @@
     &:hover
       color: $color-hover
       z-index: 1
-      filter: grayscale(0%)
+      filter: unset
       transform: translateY(-1px)
       background: linear-gradient(145deg, #48484A, #2C2C2E)
       box-shadow: 2px 4px 8px #ddd, -2px -4px 8px #2C2C2E
       if hexo-config('style.darkmode') == 'auto'
         @media (prefers-color-scheme: dark)
           box-shadow: none
+
+.proj-wrap
+  display: grid
+  grid-gap: 0.25rem 0.25rem
+  a.item
+    border-radius: 4px
+    font-size: $fs-13
+    font-weight: 500
+    color: var(--text-p2)
+    background: var(--block)
+    border: 1px solid var(--block-border)
+    overflow: hidden
+    padding: .75em
+    text-align: center
+    svg
+      margin-right: .5em
+    &:hover
+      color: $color-hover
+      background: var(--card)

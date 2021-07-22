@@ -2,19 +2,37 @@
 // 默认组件
 if (page.sidebar == undefined) {
   if (page.layout == 'post' && page.content) {
-    page.sidebar = ['toc'];
+    page.sidebar = ['toc', 'repo_info'];
   } else if (page.layout == 'wiki' && page.content) {
-    page.sidebar = ['toc', 'wiki_more'];
+    page.sidebar = ['toc', 'repo_info', 'wiki_more'];
   } else {
-    page.sidebar = theme.sidebar.widgets.default;
+    page.sidebar = theme.sidebar.widgets.default_layout;
   }
 }
+function layoutWidgets() {
+  var el = '';
+  el += '<div class="widgets">';
+  if (page.sidebar) {
+    page.sidebar.forEach((w, i) => {
+      if (w in theme.sidebar.widgets) {
+        let widget = theme.sidebar.widgets[w];
+        el += partial('widgets/' + widget.layout, {item: widget});
+      }
+    });
+  }
+  el += '</div>';
+  return el;
+}
 function layoutFooterDiv() {
-  if (theme.footer.social && theme.footer.social.length > 0) {
-    var el = '<footer class="footer"><div class="social-wrap dis-select">';
+  if (page.layout !== 'wiki' && theme.footer.social && theme.footer.social.length > 0) {
+    var el = '<footer class="footer dis-select">';
+    el += '<div class="social-wrap">';
     theme.footer.social.forEach(item => {
       if (item.icon && (item.url || item.onclick)) {
         el += '<a class="social"';
+        if (item.title) {
+          el += ' title="' + item.title + '"';
+        }
         if (item.url) {
           el += ' href="' + url_for(item.url) + '"';
           if (item.url.includes('://')) {
@@ -31,7 +49,8 @@ function layoutFooterDiv() {
         el += '</a>';
       }
     });
-    el += '</div></footer>';
+    el += '</div>';
+    el += '</footer>';
     return el;
   } else {
     return '';
@@ -39,12 +58,5 @@ function layoutFooterDiv() {
 }
 %>
 <%- partial('header', {where: 'sidebar'}) %>
-<div class='widgets'>
-  <% page.sidebar.forEach(function(widget){ %>
-    <% if (widget in theme.sidebar.widgets) { %>
-      <% let w = theme.sidebar.widgets[widget]; %>
-      <%- partial('widgets/' + w.layout, {item: w}) %>
-    <% } %>
-  <% }) %>
-</div>
+<%- layoutWidgets() %>
 <%- layoutFooterDiv() %>

@@ -3,6 +3,7 @@ article.md
   padding: 1rem
   color: var(--text-p1)
   line-height: 1.7
+  word-break: break-word
 
 article.md.excerpt
   p
@@ -24,12 +25,22 @@ article.md.content
     color: var(--text-p0)
     padding-top: 1rem
     margin-bottom: 1em
+    line-height: 1.8
     &:hover
       a.headerlink:before
         opacity: 1
+  blockquote,ul,ol
+    p,ul,ol
+      font-size: $fs-14
+      line-height: 1.5
+  p,blockquote,.tag-plugin,ul,ol,.highlight,table
+    margin-top: var(--gap-p)
+    margin-bottom: var(--gap-p)
+    *
+      --gap-p: .5rem
 
 // titles
-article.md
+article.md.content
   a.headerlink:before
     opacity: 0
     content: '#'
@@ -45,15 +56,15 @@ article.md
   h4,h5,h6
     font-weight: 500
   h1+h2
-    margin-top: 0
+    margin-top: -0.5rem
   h2+h3
-    margin-top: 0
+    margin-top: -1rem
   h3+h4
-    margin-top: 0
+    margin-top: -1rem
   h4+h5
-    margin-top: 0
+    margin-top: -1rem
   h5+h6
-    margin-top: 0
+    margin-top: -1rem
 
 // a
 article.md
@@ -68,29 +79,36 @@ article.md p
 
 // code
 article.md code
-  color: $color-inlinecode
+  -webkit-font-smoothing: auto
+  -moz-osx-font-smoothing: auto
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  color: var(--text-code)
   font-family: $ff-code
   word-break: break-all
-  font-size: inherit
+  font-size: 85%
   background: var(--block)
-  padding: 2px
-  border-radius: 2px
-  border: 1px solid var(--block-border)
+  padding: .2em .4em
+  border-radius: 4px
+article.md pre
+  -webkit-font-smoothing: auto
+  -moz-osx-font-smoothing: auto
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
 
 // div
 article.md>div
-  margin: 1rem 0
+  margin: var(--gap-p) 0
 // blockquote
 article.md blockquote
-  margin: 1rem 0
+  margin-left: 0
+  margin-right: 0
   padding: 1rem
-  background: var(--block)
-  border-left: 3px solid $color-theme
-  border-radius: 0 $border-block $border-block 0
+  background: var(--card)
+  border-left: 4px solid $color-theme
+  border-radius: $border-block
   color: var(--text-p2)
-  p
-    margin: 0.5em 0
-    font-size: $fs-14
+  box-shadow: $boxshadow-card
 
 
 article.md img

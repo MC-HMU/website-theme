@@ -5,7 +5,7 @@ btn:
   notes: Notes
   more: More
   recent_publish: Recent
-  all_wiki: All
+  all_wiki: All Products
   category: Category
   categories: Categories
   tag: Tag
@@ -16,9 +16,12 @@ btn:
 meta:
   recent_update: Recent Update
   toc: TOC
-  read_prev: or prev
   read_next: READ NEXT
+  prev: Prev
+  next: Next
   older: Older
+  newer: Newer
+  all_articles: All Articles
   references: References
   related_posts: Related Posts
   comment_title: Join the discussion
@@ -28,6 +31,7 @@ meta:
   updated: 'Updated on'
   license: License
   share: Share
+  repo_info: Repo Info
   date_suffix:
     just: Just
     min: minutes ago

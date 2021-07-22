@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.1.0'
+  version: '1.2.1'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   cdn_css: # Use cdn links instead of /css/main.css
@@ -27,7 +27,7 @@ sidebar:
   # Sidebar widgets
   widgets:
     # default layout in home/wiki/categories/tags/archives pages
-    default: # [welcome, recent]
+    default_layout: [welcome, recent]
     # Recent update
     recent:
       layout: recent
@@ -101,20 +101,46 @@ comments:
       - 6783037F2DF30EAB99F9FC256157D875
     friends: #md5加密后的小伙伴邮箱
       - 6783037F2DF30EAB99F9FC256157D875
-
+  # Twikoo
+  # https://twikoo.js.org/
+  twikoo:
+    js: https://cdn.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js # 建议锁定版本
+    envId: https://xxx # vercel函数
 
 ######## Footer ########
 since: 2020
 footer:
   social:
-    # - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/25678f144c438.svg"/>'
+    # - title: RSS
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/25678f144c438.svg"/>'
     #   url: /atom.xml
-    # - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/08a41b181ce68.svg"/>'
+    # - title: GitHub
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/08a41b181ce68.svg"/>'
     #   url: /
-    # - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/cf1ae151f9e83.svg"/>'
+    # - title: Music
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/cf1ae151f9e83.svg"/>'
     #   url: /
-    # - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/942ebbf1a4b91.svg"/>'
+    # - title: Comments
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/942ebbf1a4b91.svg"/>'
     #   url: /
+  sitemap:
+    # '博客':
+    #   - '[近期](/)'
+    #   - '[分类](/)'
+    #   - '[标签](/)'
+    #   - '[归档](/)'
+    # '项目':
+    #   - '[开源库](/)'
+    #   - '[实用脚本](/)'
+    # '社交':
+    #   - '[友链](/)'
+    #   - '[留言板](/)'
+    #   - '[Spotify](/)'
+    #   - '[Unsplash](/)'
+    # '更多':
+    #   - '[关于本站](/)'
+    #   - '[GitHub](/)'
+    #   - '[GitLab](/)'
   license: '[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)'
   source: #'[GitHub](https://github.com/xaoxuu/hexo-theme-stellar)'
 
@@ -123,7 +149,7 @@ footer:
 tag_plugins:
   # {% note text %}
   note:
-    default_color: '' # white, dark, red, orange, yellow, green, cyan, blue, purple
+    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple
   # {% checkbox %}
   checkbox:
     interactive: false # enable interactive for user
@@ -173,9 +199,14 @@ plugins:
 
 style:
   darkmode: auto # set 'auto' to enable, set 'false' to disable
+  theme:
+    light: '#f8f8f8'
+    dark: '#20252B'
   animated_avatar:
     animate: auto # auto, always
     background: https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp
+  codeblock:
+    scrollbar: 4px
 
 default:
   avatar: https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg

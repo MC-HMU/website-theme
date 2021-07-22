@@ -49,13 +49,12 @@ details[open]
     border-bottom-left-radius: $border-block
     border-bottom-right-radius: $border-block
     font-size: $fs-15
-    inside-box()
     >:first-child
       margin-top: 0
     >:last-child
       margin-bottom: 0
 
-details[codeblock]>div.body
+details[child=codeblock]>div.body
   padding: 0
   background: transparent
   .highlight
@@ -63,3 +62,5 @@ details[codeblock]>div.body
     border-radius: 0
     background: transparent
     margin: 0
+    .code:before
+      content: none

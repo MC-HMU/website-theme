@@ -30,9 +30,8 @@ function layoutDiv() {
   }
   // footer
   el += '<div class="text">';
-  var wrapper = '';
-  wrapper += '<footer class="page-footer fs12"><hr><div>';
-  wrapper += markdown(__('footer.copyright', since, year, author));
+  el += '<footer class="page-footer fs12"><hr><div>';
+  el += markdown(__('footer.copyright', since, year, author));
   if (theme.footer.license) {
     el += markdown(__('footer.license', theme.footer.license));
   }

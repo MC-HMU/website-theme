@@ -1,6 +1,7 @@
 btn:
-  personal_homepage: Personal Homepage
   home: Home
+  personal_homepage: Personal Homepage
+  blog_home: Blog Homepage
   blog: Blog
   wiki: Wiki
   notes: Notes

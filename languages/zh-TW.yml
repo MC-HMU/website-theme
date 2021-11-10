@@ -1,6 +1,7 @@
 btn:
-  personal_homepage: 個人主頁
   home: 首頁
+  personal_homepage: 個人首頁
+  blog_home: 網誌首頁
   blog: 網誌
   wiki: 項目
   notes: 便簽

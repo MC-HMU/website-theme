@@ -1,6 +1,7 @@
 btn:
-  personal_homepage: 个人主页
   home: 主页
+  personal_homepage: 个人主页
+  blog_home: 博客主页
   blog: 文章
   wiki: 项目
   notes: 便签

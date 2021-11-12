@@ -43,7 +43,7 @@ meta:
     month: 個月前
 
 footer:
-  copyright: 'Copyright © %s-%s %s. 保留一切權利。'
+  copyright: 'Copyright © %s-%s %s 保留一切權利。'
   license: '本網誌所有文章除特別聲明外，均採用 %s 授權條款。轉載請註明出處。'
   info_not_open_source: '本站由 %s 建立，使用 %s 作為主題。'
   info_open_source: '本站由 %s 建立，使用 %s 作為主題。您可以在 %s 找到本站原始碼。'

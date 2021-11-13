@@ -44,7 +44,7 @@ meta:
 
 footer:
   copyright: 'Copyright © %s-%s %s 保留一切權利。'
-  powered_by: '本網誌由 %s & %s 強力驅動'
+  powered_by: '本網誌由 [Hexo](https://hexo.io) & [Stellar](https://xaoxuu.com/wiki/stellar/) 強力驅動'
   license: '本網誌所有文章除特別聲明外，均採用 %s 授權條款。轉載請註明出處。'
   info_not_open_source: '本站由 %s 建立，使用 %s 作為主題。'
   info_open_source: '本站由 %s 建立，使用 %s 作為主題。您可以在 %s 找到本站原始碼。'

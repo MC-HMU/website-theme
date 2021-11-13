@@ -4,8 +4,6 @@ const year = new Date().getFullYear();
 const user_name = config.author;
 const author = '[@' + config.author + '](' + config.url + config.root + ')';
 const using = '[' + stellar_info('name') + '](' + stellar_info('tree') + ' "v' + stellar_info('version') + '")';
-const framework = '[Hexo](https://hexo.io)';
-const theme = '[Stellar](https://xaoxuu.com/wiki/stellar/)';
 const source = theme.footer.source;
 const more = theme.footer.more;
 function layoutDiv() {
@@ -35,7 +33,7 @@ function layoutDiv() {
   el += '<div class="text">';
   el += '<footer class="page-footer fs12"><hr><div>';
   el += markdown(__('footer.copyright', since, year, author));
-  el += markdown(__('footer.powered_by', framework, theme));
+  el += markdown(__('footer.powered_by'));
   if (theme.footer.license) {
     el += markdown(__('footer.license', theme.footer.license));
   }

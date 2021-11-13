@@ -34,6 +34,7 @@ function layoutDiv() {
   el += '<footer class="page-footer fs12"><hr><div>';
   el += markdown(__('footer.copyright', since, year, author));
   el += markdown(__('footer.powered_by'));
+  /*
   if (theme.footer.license) {
     el += markdown(__('footer.license', theme.footer.license));
   }
@@ -42,6 +43,7 @@ function layoutDiv() {
   } else {
     el += markdown(__('footer.info_not_open_source', author, using));
   }
+  */
   if (more) {
     if ((typeof more == 'string') && more.constructor == String) {
       el += markdown(more);

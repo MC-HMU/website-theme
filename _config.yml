@@ -25,9 +25,14 @@ sidebar:
     friends: # '[友链](/friends/)'
     about: # '[关于](/about/)'
   # Sidebar widgets
+  widget_layout:
+    index: [welcome, recent] # for home/wiki/categories/tags/archives/404 pages
+    page: [welcome, toc] # for pages using 'layout:page'
+    post: [toc, repo_info] # for pages using 'layout:post'
+    wiki: [toc, repo_info, wiki_more] # for pages using 'layout:wiki'
   widgets:
     # default layout in home/wiki/categories/tags/archives pages
-    default_layout: [welcome]
+    # default_layout: [welcome]
     # Recent update
     recent:
       layout: recent
@@ -44,14 +49,14 @@ sidebar:
     welcome:
       layout: markdown
       title: 欢迎来到Cubik的小站
-      content:
-        - '无限创意 / 无限进步 / 无限可能'
+      content: | # support markdown
+        无限创意 / 无限进步 / 无限可能
 
 
 
 ######## Main ########
 breadcrumb:
-  home: config.title # config.title / config.author / home or custom content
+  home: home # config.title / config.author / home or custom content
 
 ######## Article ########
 article:
@@ -131,18 +136,18 @@ comments:
 since: 2020
 footer:
   social:
-    # - title: RSS
-    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/25678f144c438.svg"/>'
-    #   url: /atom.xml
-    # - title: GitHub
-    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/08a41b181ce68.svg"/>'
+    # github:
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/>'
     #   url: /
-    # - title: Music
-    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/cf1ae151f9e83.svg"/>'
+    # music:
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/>'
     #   url: /
-    # - title: Comments
-    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/942ebbf1a4b91.svg"/>'
+    # unsplash:
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/>'
     #   url: /
+    # comments:
+    #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/>'
+    #   url: /about/#comments
   sitemap:
     # '博客':
     #   - '[近期](/)'
@@ -151,16 +156,12 @@ footer:
     #   - '[归档](/)'
     # '项目':
     #   - '[开源库](/)'
-    #   - '[实用脚本](/)'
     # '社交':
     #   - '[友链](/)'
     #   - '[留言板](/)'
-    #   - '[Spotify](/)'
-    #   - '[Unsplash](/)'
     # '更多':
     #   - '[关于本站](/)'
     #   - '[GitHub](/)'
-    #   - '[GitLab](/)'
   license: '[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)'
   source: #'[GitHub](https://github.com/xaoxuu/hexo-theme-stellar)'
   more: # string or array (support markdown)

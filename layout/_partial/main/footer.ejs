@@ -1,6 +1,6 @@
 <%
 const since = config.since;
-const year = new Date().getFullYear();
+const year = config.year;
 const user_name = config.author;
 const author = '[@' + config.author + '](' + config.url + config.root + ')';
 const using = '[' + stellar_info('name') + '](' + stellar_info('tree') + ' "v' + stellar_info('version') + '")';

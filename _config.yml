@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.6.0'
+  version: '1.6.1'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   cdn_css: # Use cdn links instead of /css/main.css
@@ -31,8 +31,6 @@ sidebar:
     post: [toc, repo_info] # for pages using 'layout:post'
     wiki: [toc, repo_info, wiki_more] # for pages using 'layout:wiki'
   widgets:
-    # default layout in home/wiki/categories/tags/archives pages
-    # default_layout: [welcome]
     # Recent update
     recent:
       layout: recent
@@ -175,12 +173,23 @@ tag_plugins:
   # {% checkbox %}
   checkbox:
     interactive: false # enable interactive for user
+  # {% quot %}
+  quot:
+    default: # 可以自行配置多种图标方案
+      prefix: https://s2.loli.net/2022/01/04/vsTB5pGrIHfPxSj.png
+      suffix: https://s2.loli.net/2022/01/04/NORdtjlAhifZSns.png
+    hashtag:
+      prefix: https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png
+  # {% emoji %}
   emoji:
     default: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
     twemoji: https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/%s.svg
     qq: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
     aru: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/%s.gif
     tieba: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%s.png
+  # {% image %}
+  image:
+    fancybox: # true, false
 
 
 ######## JS Plugins ########
@@ -189,14 +198,6 @@ plugins:
   # jquery
   jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
 
-  ## lazyload plugins ##
-  # fancybox
-  fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-  # swiper
-  swiper:
-    enable: true
-    css: https://unpkg.com/swiper@6/swiper-bundle.min.css
-    js: https://unpkg.com/swiper@6/swiper-bundle.min.js
   # issues api
   sitesjs: /js/plugins/sites.js
   friendsjs: /js/plugins/friends.js
@@ -224,6 +225,23 @@ plugins:
     duration: 500 # ms
     interval: 100 # ms
     scale: 1 # 0.1~1
+
+  # https://fancyapps.com/docs/ui/fancybox/
+  # available for {% image xxx %}
+  fancybox:
+    enable: true
+    js: https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
+    css: https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css
+    # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
+    # 使用valine评论可以写: .vcontent img:not(.vemoji)
+    # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
+    selector: .swiper-slide img # 多个选择器用英文逗号隔开
+
+  # swiper
+  swiper:
+    enable: true
+    css: https://unpkg.com/swiper@6/swiper-bundle.min.css
+    js: https://unpkg.com/swiper@6/swiper-bundle.min.js
 
 style:
   darkmode: auto # auto / always / false

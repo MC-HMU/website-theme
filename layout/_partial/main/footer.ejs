@@ -31,13 +31,17 @@ function layoutDiv() {
   }
   // footer
   el += '<div class="text">';
-  el += '<footer class="page-footer fs12"><hr><div>';
-  el += markdown(__('footer.copyright', since, year, author));
-  el += markdown(__('footer.powered_by'));
-  /*
+  el += '<footer class="page-footer fs12"><hr><div><br/>';
   if (theme.footer.license) {
     el += markdown(__('footer.license', theme.footer.license));
   }
+  if (source) {
+    el += markdown(__('footer.powered_by_open_source', source));
+  } else {
+    el += markdown(__('footer.powered_by'));
+  }
+  el += markdown(__('footer.copyright', since, year, author));
+  /*
   if (source) {
     el += markdown(__('footer.info_open_source', author, using, source));
   } else {

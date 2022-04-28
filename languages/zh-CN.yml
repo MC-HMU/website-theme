@@ -31,7 +31,6 @@ meta:
   more: '更多%s'
   created: 发布于
   updated: 更新于
-  license: 许可协议
   share: 分享文章
   repo_info: 项目仓库
   date_suffix:
@@ -45,7 +44,6 @@ footer:
   copyright: 'Copyright © %s-%s %s 保留所有权利。'
   powered_by: '本博客由 [Hexo](https://hexo.io) & [Stellar](https://xaoxuu.com/wiki/stellar/) 强力驱动'
   powered_by_open_source: '本博客由 [Hexo](https://hexo.io) & [Stellar](https://xaoxuu.com/wiki/stellar/) 强力驱动，您可以在 %s 找到本站源码。'
-  license: '本博客所有文章除特别声明外，均采用 %s 许可协议，转载请注明出处。'
   info_not_open_source: '本站由 %s 创建，使用 %s 作为主题。'
   info_open_source: '本站由 %s 创建，使用 %s 作为主题，您可以在 %s 找到本站源码。'
 

@@ -31,7 +31,6 @@ meta:
   more: 'More %s'
   created: 'Posted on'
   updated: 'Updated on'
-  license: License
   share: Share
   repo_info: Repo Info
   date_suffix:
@@ -45,7 +44,6 @@ footer:
   copyright: 'Copyright © %s-%s %s All rights reserved.'
   powered_by: 'This blog is powered by [Hexo](https://hexo.io) & [Stellar](https://xaoxuu.com/wiki/stellar/)'
   powered_by_open_source: 'This blog is powered by [Hexo](https://hexo.io) & [Stellar](https://xaoxuu.com/wiki/stellar/). You can find its source code in %s.'
-  license: 'All articles in this blog are licensed under %s unless stating additionally.'
   info_not_open_source: 'This site was deployed by %s using %s.'
   info_open_source: 'This site was deployed by %s using %s. You can find the source code in %s.'
 

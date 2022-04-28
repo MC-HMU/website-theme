@@ -6,9 +6,6 @@ function layoutDiv() {
     item.push('references');
   }
   if (page.layout !== 'wiki') {
-    if (theme.article.license && theme.article.license.length > 0) {
-      item.push('license');
-    }
     if (theme.article.share && theme.article.share.length > 0) {
       item.push('share');
     }
@@ -40,17 +37,6 @@ function layoutDiv() {
   }
 
   if (page.layout == 'post') {
-    if (theme.article.license && page.license != false) {
-      el += '<section id="license">';
-      el += '<div class="header">';
-      el += '<span>' + __('meta.license') + '</span>';
-      el += '</div>';
-      el += '<div class="body">';
-      el += markdown(page.license || theme.article.license);
-      el += '</div>';
-      el += '</section>';
-    }
-
     if (theme.article.share && page.share != false) {
       el += '<section id="share">';
       el += '<div class="header">';

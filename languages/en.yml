@@ -42,6 +42,7 @@ meta:
 
 footer:
   copyright: 'Copyright © %s-%s %s All rights reserved.'
+  copyright-no-since: 'Copyright © %s %s All rights reserved.'
   powered_by: 'This blog is powered by [Hexo](https://hexo.io) & [Stellar](https://xaoxuu.com/wiki/stellar/)'
   powered_by_open_source: 'This blog is powered by [Hexo](https://hexo.io) & [Stellar](https://xaoxuu.com/wiki/stellar/). You can find its source code in %s.'
   info_not_open_source: 'This site was deployed by %s using %s.'

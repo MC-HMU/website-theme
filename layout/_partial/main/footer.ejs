@@ -37,7 +37,11 @@ function layoutDiv() {
   } else {
     el += markdown(__('footer.powered_by'));
   }
-  el += markdown(__('footer.copyright', since, year, author));
+  if (since) {
+    el += markdown(__('footer.copyright', since, year, author));
+  } else {
+    el += markdown(__('footer.copyright-no-since', year, author));
+  }
   /*
   if (source) {
     el += markdown(__('footer.info_open_source', author, using, source));
